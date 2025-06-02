@@ -1,0 +1,54 @@
+<!doctype html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chula Calendar</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h1>Chula Calendar</h1>
+    </div>
+    <div class="calendar-bar">
+        <a href="#" class="btn btn-primary" id="cal-prev">
+            &laquo; <span data-i18n="Prev"></span>
+        </a>
+        <span class="calendar-period" id="current-period">January 2025</span>
+        <a href="#" class="btn btn-primary" id="cal-next">
+            <span data-i18n="Next"></span> &raquo;
+        </a>
+    </div>
+    <div id="calendar-month"></div>
+    <div class="controls">
+        <div class="control-item">
+            <div class="control-label" data-i18n="Week starts on:"></div>
+            <div class="control-radio-toggle">
+                <input type="radio" name="week" id="week-sunday" value="sunday" checked>
+                <label for="week-sunday" data-i18n="Sunday"></label>
+                <input type="radio" name="week" id="week-monday" value="monday">
+                <label for="week-monday" data-i18n="Monday"></label>
+            </div>
+        </div>
+        <div class="control-item">
+            <div class="control-label" data-i18n="Language:"></div>
+            <div class="control-radio-toggle">
+                <input type="radio" name="language" id="language-en" value="en" checked>
+                <label for="language-en">EN</label>
+                <input type="radio" name="language" id="language-th" value="th">
+                <label for="language-th">TH</label>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer-text">
+            Information are not guaranteed to be accurate. Plase check with the <a href="https://www.reg.chula.ac.th" rel="nofollow" target="_blank">Office of Registrar of Chulalongkorn University</a> for the up-to-date information.
+        </div>
+    </div>
+</div>
+<script type="module">
+  import mains from './js/mains.js'
+
+  mains()
+</script>
+</body>
