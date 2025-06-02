@@ -146,7 +146,7 @@ export function renderMonth ({ days, academic }, displayDate, language, weekStar
     calEl.appendChild(cellEl)
 
     // Display holidays name under each week row for smaller screens
-    if (colNo === 7 && collectedHolidays.length > 0) {
+    if (colNo === 7 && (collectedHolidays.length > 0 || collectedExams.size > 0)) {
       const legendEl = document.createElement('div')
       legendEl.classList.add('cal-legend')
       legendEl.classList.add('cal-span')
