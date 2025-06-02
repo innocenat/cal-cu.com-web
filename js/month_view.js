@@ -106,14 +106,16 @@ export function renderMonth ({ days, academic }, displayDate, language, weekStar
           cellEl.classList.add('cal-cell--exam')
           cellEl.classList.add('cal-cell--legend-exam')
 
-          if (academicDay.type.includes('midterm')) {
-            dayNamesEl.appendChild(wrapTextEl(_t('Midterm'), 'cal-cell__day-name cal-cell__day-name--exam'))
-            collectedExams.add('midterm')
-          }
+          if (currentDate.getMonth() === month) {
+            if (academicDay.type.includes('midterm')) {
+              dayNamesEl.appendChild(wrapTextEl(_t('Midterm'), 'cal-cell__day-name cal-cell__day-name--exam'))
+              collectedExams.add('midterm')
+            }
 
-          if (academicDay.type.includes('final')) {
-            dayNamesEl.appendChild(wrapTextEl(_t('Finals'), 'cal-cell__day-name cal-cell__day-name--exam'))
-            collectedExams.add('final')
+            if (academicDay.type.includes('final')) {
+              dayNamesEl.appendChild(wrapTextEl(_t('Finals'), 'cal-cell__day-name cal-cell__day-name--exam'))
+              collectedExams.add('final')
+            }
           }
         }
       }
@@ -124,11 +126,14 @@ export function renderMonth ({ days, academic }, displayDate, language, weekStar
           cellEl.classList.add('cal-cell--legend-chula')
           dayNamesEl.appendChild(wrapTextEl(getLocalName(dayType), 'cal-cell__day-name cal-cell__day-name--chula'))
 
-          if (!(formatDate(currentDate) in dayTypeMap)) {
-            dayTypeMap[formatDate(currentDate)] = 'chula'
-            collectedHolidays.push(formatDate(currentDate))
-          } else if (dayTypeMap[formatDate(currentDate)] === 'day') {
-            dayTypeMap[formatDate(currentDate)] = 'chula'
+
+          if (currentDate.getMonth() === month) {
+            if (!(formatDate(currentDate) in dayTypeMap)) {
+              dayTypeMap[formatDate(currentDate)] = 'chula'
+              collectedHolidays.push(formatDate(currentDate))
+            } else if (dayTypeMap[formatDate(currentDate)] === 'day') {
+              dayTypeMap[formatDate(currentDate)] = 'chula'
+            }
           }
         }
       }
