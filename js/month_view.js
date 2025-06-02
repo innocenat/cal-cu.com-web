@@ -17,10 +17,6 @@ function getNextDOW (date, dow) {
   return currentDate
 }
 
-function findLastDayOfPeriod (academic, period) {
-
-}
-
 export function renderMonth ({ days, academic }, displayDate, language, weekStartsOnSunday) {
   const month = displayDate.getMonth()
   const year = displayDate.getFullYear()
