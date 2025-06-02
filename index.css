@@ -39,9 +39,12 @@ body, body[data-theme = "light"] {
     --semester-bg: #FEECF3;
     --exam: #7B890F;
     --chula: #DB5F8E;
-}
 
-body[data-theme = "dark"] {
+    --today: #FEF9C2;
+
+    --shadows-1: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+    --shadows-2: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+    --shadows-3: 0px 3px 3px -2px rgba(0, 0, 0, 0.2), 0px 3px 4px 0px rgba(0, 0, 0, 0.14), 0px 1px 8px 0px rgba(0, 0, 0, 0.12);
 }
 
 body {
@@ -53,6 +56,8 @@ body {
     background-color: var(--primary);
     color: var(--primary-fg);
     padding: 1rem;
+
+    box-shadow: var(--shadows-3)
 }
 
 .header h1 {
@@ -82,6 +87,8 @@ body {
     border-radius: 0.5rem;
     background: var(--secondary);
     color: var(--secondary-fg);
+
+    box-shadow: var(--shadows-2);
 }
 
 .control-radio-toggle input {
@@ -180,7 +187,6 @@ body {
 
 .cal-cell {
     background: var(--cal-regular-day-bg);
-    border: 1px solid var(--cal-border);
     padding: 0.25rem;
     border-radius: 0.25rem;
 
@@ -188,6 +194,12 @@ body {
     flex-direction: column;
     min-height: 5rem;
     justify-content: space-between;
+
+    box-shadow: var(--shadows-1);
+}
+
+.cal-cell--today {
+    background: var(--today) !important;
 }
 
 .cal-cell--today .cal-cell__date-num {
@@ -385,6 +397,8 @@ body {
     color: var(--secondary-fg);
     cursor: pointer;
     text-decoration: none;
+
+    box-shadow: var(--shadows-2);
 }
 
 .btn-primary {
@@ -410,4 +424,8 @@ body {
     padding: 1rem;
     text-align: center;
     font-size: 0.8rem;
+}
+
+.footer a {
+    color: var(--primary);
 }
