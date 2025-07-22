@@ -158,6 +158,8 @@
         ["2025-07-25", "Apply to register (3)", "แสดงความจำนง (3)"],
         ["2025-08-01", "Notice of registration (3)", "ทราบผลแสดงความจำนง (3)"],
 
+        [["2025-09-29", "2026-10-01"], "Commencement Ceremony", "พิธีพระราชทานปริญญาบัตร"],
+
         ["2025-08-15", "Last day of adding courses", "เพิ่มวิชาวันสุดท้าย"],
         ["2025-09-12", "Last day of removing courses", "ลดวิชาวันสุดท้าย"],
         ["2025-10-24", "Last day of withdrawing", "ถอนวันสุดท้าย"],
